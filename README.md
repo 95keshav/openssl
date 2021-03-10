@@ -85,7 +85,8 @@ Open SSL architecture is divided into 4 parts
 ## OpenSSL Module
 ![image](https://raw.githubusercontent.com/95keshav/openssl/main/openssl%20modules.png) <br />
 [Get more information on OpenSSL Architechture](https://www.openssl.org/docs/OpenSSLStrategicArchitecture.html)
-+## OpenSSL installation
+
+## OpenSSL installation
 
 #### on Windows
 
@@ -217,7 +218,7 @@ $ openssl req -out mydomain.csr -new -newkey rsa:2048 -nodes -keyout mydomain.ke
 
 And then fill in information as requested.
 
-<img src="C:\Users\sihang\AppData\Roaming\Typora\typora-user-images\image-20210304154146261.png" alt="image-20210304154146261"  />
+![image](https://github.com/WannaflySC/openssl/blob/main/CSR.png)
 
 （*use $ openssl req -in mydomain.csr -text to check the details of the csr file*）
 
@@ -227,7 +228,7 @@ And then fill in information as requested.
 
 
 
- [Tutorial of Encryption and Decryption in AES algorithm](https://www.youtube.com/watch?v=4lgcElJWxVM)
+[Tutorial of Encryption and Decryption in AES algorithm](https://www.youtube.com/watch?v=4lgcElJWxVM)
 
 [Tutoroal of generating RSA keys](https://www.youtube.com/watch?v=iHb3nFtzFoc)
 
@@ -239,7 +240,7 @@ https://www.openssl.org/docs<br />
 “Figure1. OSI Layers and Protocols used.” https://thecybersecuritymancom.com, https://thecybersecuritymancom.files.wordpress.com/2017/11/84433547__web.png.<br />
 “Figure 2. SSL Client-Server communication.” https://www.manageengine.com/, https://www.manageengine.com/key-manager/information-center/what-is-ssl-certificate-management.html.<br />
 https://www.sciencedirect.com/topics/engineering/layered-architecture<br />
-+“<a id="1">[2]</a>.” https://www.youtube.com/watch?v=-nEh7X4dtuw&t=58s
+“<a id="1">[2]</a>.” https://www.youtube.com/watch?v=-nEh7X4dtuw&t=58s
 
 “<a id="1">[3]</a>.” https://support.globalsign.com/ssl/ssl-certificates-installation/generate-csr-openssl
 
