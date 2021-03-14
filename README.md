@@ -218,7 +218,7 @@ $ openssl req -out mydomain.csr -new -newkey rsa:2048 -nodes -keyout mydomain.ke
 
 And then fill in information as requested.
 
-![image](https://github.com/WannaflySC/openssl/blob/main/CSR.png)
+![image](https://raw.githubusercontent.com/WannaflySC/openssl/main/CSR.png)
 
 （*use $ openssl req -in mydomain.csr -text to check the details of the csr file*）
 
