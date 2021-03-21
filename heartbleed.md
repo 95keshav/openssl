@@ -85,7 +85,7 @@
 
 
 
-#### Tools needed
+### Tools needed
 
 1. A bee-box virtual machine with OpenSSL in version 1.0.1~1.0.2  provided by bWAPP     
 
@@ -105,7 +105,7 @@
    
    
 
-#### Method 1：
+### Method 1：
 
 1. Open the 2 virtual machines.
 
@@ -155,7 +155,7 @@ exploit
 
 
 
-#### Method 2:
+### Method 2:
 
 1. Open the 2 virtual machines.
 
