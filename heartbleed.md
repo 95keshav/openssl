@@ -184,16 +184,17 @@ exploit
 
 [6] Heartbleed bug News, https://heartbleed.com/.![image](https://user-images.githubusercontent.com/52240576/111923122-ed2db580-8a73-11eb-8305-ed1cb52efffe.png)
 
-[7] https://www.concise-courses.com/hacking-tools/
+[7] Hacking Tools, https://www.concise-courses.com/hacking-tools/
 
-[8] https://www.youtube.com/watch?v=SgJm0C6jzbo&t=47s
+[8] Exploitation Turtorial, https://www.youtube.com/watch?v=SgJm0C6jzbo&t=47s
 
-[9] https://github.com/ctfs/write-ups-2014/blob/master/plaid-ctf-2014/heartbleed/heartbleed.py
+[9] Heartbleed script, https://github.com/ctfs/write-ups-2014/blob/master/plaid-ctf-2014/heartbleed/heartbleed.py
 
-[10] https://sourceforge.net/projects/bwapp/files/bee-box/
+[10] bWAPP, https://sourceforge.net/projects/bwapp/files/bee-box/
 
-[11] https://www.kali.org
+[11] Kali-Linux, https://www.kali.org
 
-[12]https://en.wikipedia.org/wiki/Metasploit_Project
+[12] Metasploit, https://en.wikipedia.org/wiki/Metasploit_Project
 
-[13]https://en.wikipedia.org/wiki/Nmap
+[13] Nmap, https://en.wikipedia.org/wiki/Nmap
+
