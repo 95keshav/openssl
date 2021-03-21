@@ -36,8 +36,9 @@
 ## How Heartbleed Exploit  Works
 
 * Normally the system sends the heatbeat extension packet of 65536 bytes with some payload to another system to keep TLS connection active . In return another system send back same payload with some padding. This packet goes to and fro multiple time just to keep TSL active to save time taken by TLS to initialise so that fast communication can be done.
-![alt text](https://raw.githubusercontent.com/95keshav/openssl/main/Figure%202.%20SSL%20Client-Server%20communication.png)
+![alt text](https://raw.githubusercontent.com/95keshav/openssl/main/heartbleed.png)
 * But there is flow in the code of OpenSSL it does not check the lenght of packet.
+![alt text](https://raw.githubusercontent.com/95keshav/openssl/main/heartbleed_hacked.png)
 * Hackers use this flow to exploit the packet, They send packet with just 1 byte of data and keep other bytes empty, System do not confirm the lenght and save it in memory. When System sends back response it does not know that packet size was only of 1 byte. and it copy 65536 bytes from memory and sent back to hacker
 * That data from memroy may contain SSL private keys, User credentials, System Memory address.
 [To Get more information on Heartbleed click here](https://www.youtube.com/watch?v=WgrBrPW_Zn4)
