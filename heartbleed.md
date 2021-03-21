@@ -81,7 +81,7 @@
 
 
 
-### OpenSSL Heartbleed Exploit
+## OpenSSL Heartbleed Exploit
 
 
 
@@ -171,7 +171,7 @@ exploit
 
    
 
-### References:
+## References:
 [1] Netcraft's April 2014 Web Server Survey, https://news.netcraft.com/archives/2014/04/02/april-2014-web-server-survey.html.
 
 [2] Application Security and Quality Analysis Tools, https://www.synopsys.com/software-integrity/security-testing.html.
